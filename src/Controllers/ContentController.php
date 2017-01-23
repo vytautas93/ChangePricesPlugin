@@ -2,8 +2,8 @@
  
 namespace ChangePricesPlugin\Controllers;
  
-/*use Plenty\Modules\Item\Item\Contracts\ItemRepositoryContract;*/
-use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
+use Plenty\Modules\Item\Item\Contracts\ItemRepositoryContract;
+/*use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;*/
 
 /*use Plenty\Modules\Item\Item\Contracts*/
 use Plenty\Plugin\Controller;
