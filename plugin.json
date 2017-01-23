@@ -1,0 +1,8 @@
+{
+    "name"              :"ChangePricesPlugin",
+    "description"       :"Plugin for change items prices by time interval",
+    "namespace"         :"ChangePricesPlugin",
+    "author"            :"Vytautas Sakalauskas",
+    "type"              :"template",
+    "serviceProvider"   :"ChangePricesPlugin\\Providers\\HelloWorldServiceProvider"
+}
