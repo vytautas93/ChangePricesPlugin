@@ -1,3 +1,9 @@
-<h1>Hello World!</h1>
+{% extends "ChangePricesPlugin::layouts.index" %}
 
-Result: {{ res | json_encode() }}
+{% block content %}
+    <h1>Hello World!</h1>
+    Result: {{ res | json_encode() }}
+{% endblock %}
+
+
+

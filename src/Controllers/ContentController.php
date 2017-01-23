@@ -21,6 +21,8 @@ class ContentController extends Controller
     public function showItem($itemID){
         $result = [];
         $result['res'] = $this->itemRepository->show(181);
+        
+        return $twig->render('ChangePricesPlugin::content.hello',$result);
     }
     
     
