@@ -18,7 +18,7 @@ class ContentController extends Controller
         $this->itemRepository = $itemRepository;
     }
     
-    public function showItem($itemID){
+    public function showItem(Twig $twig,$itemID){
         $result = [];
         $result['res'] = $this->itemRepository->show(181);
         
