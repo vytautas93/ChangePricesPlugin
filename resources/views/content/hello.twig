@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="container">
-        <form method = "POST" action = "" >
+        <form method = "POST" action = "https://change-prices-plugin-services-sakalauskas.c9users.io/ChangePricesPluginServices/public/time" >
             <div class="form-group">
                 <div class="form-control">
                     <label for = "start" >Start time:</label>
@@ -13,6 +13,7 @@
                     <input type = "time" name = "end"></input>
                 </div>
             </div>
+            <input type="submit" value="Submit">
         </form>    
     </div>
     Result: {{ res | json_encode() }}

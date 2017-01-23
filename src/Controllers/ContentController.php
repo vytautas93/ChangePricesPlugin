@@ -2,7 +2,9 @@
  
 namespace ChangePricesPlugin\Controllers;
  
-use Plenty\Modules\Item\Item\Contracts\ItemRepositoryContract;
+/*use Plenty\Modules\Item\Item\Contracts\ItemRepositoryContract;*/
+use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
+
 /*use Plenty\Modules\Item\Item\Contracts*/
 use Plenty\Plugin\Controller;
 use Plenty\Plugin\Templates\Twig;
@@ -21,12 +23,8 @@ class ContentController extends Controller
     
     public function showItem(Twig $twig,$itemID){
         $itemId = 181;
-        $columns = [];
+        $columns = ["name1"];
         $lang = 'en';
-        
-        
-        
-        
         $result = [];
         $result['res'] = $this->itemRepository->show($itemId,$columns,$lang);
         
