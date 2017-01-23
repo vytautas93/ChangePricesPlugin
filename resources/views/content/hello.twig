@@ -16,6 +16,7 @@
             <input type="submit" value="Submit">
         </form>    
     </div>
+    Result: {{ test | json_encode() }}
     Result: {{ res | json_encode() }}
 {% endblock %}
 
