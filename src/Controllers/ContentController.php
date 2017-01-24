@@ -30,7 +30,7 @@ class ContentController extends Controller
         $result['res'] = $this->itemRepository->show($itemId,$columns,$lang);
     }
     
-    public function getTime()
+    public function getTime(Twig $twig)
     {
         // Get cURL resource
         $curl = curl_init('https://change-prices-plugin-services-sakalauskas.c9users.io/ChangePricesPluginServices/public/getTime/3');
