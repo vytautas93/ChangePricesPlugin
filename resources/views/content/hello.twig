@@ -17,7 +17,7 @@
         </form>    
     </div>
     <pre>
-        {{ resp }}
+        {{ time | json_encode() }}
     </pre>
 {% endblock %}
 
