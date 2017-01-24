@@ -32,16 +32,15 @@ class ContentController extends Controller
     
     public function getTime(Twig $twig)
     {
-        $curl = curl_init('https://change-prices-plugin-services-sakalauskas.c9users.io/ChangePricesPluginServices/public/getTime/4');
+        $url = 'https://change-prices-plugin-services-sakalauskas.c9users.io/ChangePricesPluginServices/public/getTime/4';
+        $curl = curl_init();
+        curl_setopt($cURL, CURLOPT_URL, $url);
+        curl_setopt($cURL, CURLOPT_HTTPGET, true);
+        
         $resp = curl_exec($curl);
         curl_close($curl);
-        $result = [];
-        $result['time'] = $resp;
-        return $twig->render('ChangePricesPlugin::content.hello',$result);
-        
-        
-        
-        
+        return $twig->render('ChangePricesPlugin::content.hello',$resp);
+
       /*  $response = file_get_contents ( '' );
         if($response) 
         {

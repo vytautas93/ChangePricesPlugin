@@ -1,7 +1,7 @@
 {% extends "ChangePricesPlugin::layouts.index" %}
 
 {% block content %}
-    <div class="container">
+    <div class="col-md-4">
         <form method = "POST" action = "https://change-prices-plugin-services-sakalauskas.c9users.io/ChangePricesPluginServices/public/time" >
             <div class="form-group">
                 <div class="form-control">
@@ -13,12 +13,11 @@
                     <input type = "time" name = "end"></input>
                 </div>
             </div>
-            <input type="submit" value="Submit">
+            <input class ="btn btn-success" type="submit" value="Submit">
         </form>    
     </div>
     <pre>
-        {{ time.start_time }}
-        {{ time.end_time }}
+        {{ resp }}
     </pre>
 {% endblock %}
 
