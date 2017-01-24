@@ -17,7 +17,13 @@
         </form>    
     </div>
     <pre>
-        {{ time | json_encode() }}
+        {% for result in res %}
+
+        {# json_decode() part is imaginary #}
+    
+        {% set obj = res|json_decode() %}
+        
+        {% endfor %}
     </pre>
 {% endblock %}
 
