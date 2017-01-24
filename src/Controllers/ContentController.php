@@ -36,7 +36,7 @@ class ContentController extends Controller
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_HTTPGET, true);
-        curl_setopt(CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl,CURLOPT_RETURNTRANSFER, true);
         $resp = curl_exec($curl);
         curl_close($curl);
         $result = [];
