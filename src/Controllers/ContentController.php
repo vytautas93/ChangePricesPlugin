@@ -32,13 +32,33 @@ class ContentController extends Controller
     
     public function getTime()
     {
-        $response = file_get_contents ( 'https://change-prices-plugin-services-sakalauskas.c9users.io/ChangePricesPluginServices/public/getTime/3' );
+        // Get cURL resource
+        $curl = curl_init();
+        // Set some options - we are passing in a useragent too here
+        curl_setopt_array($curl, array(
+        CURLOPT_RETURNTRANSFER => 1,
+        CURLOPT_URL => 'https://change-prices-plugin-services-sakalauskas.c9users.io/ChangePricesPluginServices/public/getTime/3',
+        CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+        ));
+        // Send the request & save response to $resp
+        $resp = curl_exec($curl);
+        // Close request to clear up some resources
+        curl_close($curl);
+        
+        $result = [];
+        $result['time'] = $resp;
+        return $twig->render('ChangePricesPlugin::content.hello',$result);
+        
+        
+        
+        
+      /*  $response = file_get_contents ( '' );
         if($response) 
         {
             $result = [];
             $result['time'] = $this->itemRepository->show($itemId,$columns,$lang);
             return $twig->render('ChangePricesPlugin::content.hello',$result);
-        }
+        }*/
     }
     
     
