@@ -33,13 +33,8 @@ class ContentController extends Controller
     public function getTime()
     {
         // Get cURL resource
-        $curl = curl_init();
+        $curl = curl_init('https://change-prices-plugin-services-sakalauskas.c9users.io/ChangePricesPluginServices/public/getTime/3');
         // Set some options - we are passing in a useragent too here
-        curl_setopt_array($curl, array(
-        CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => 'https://change-prices-plugin-services-sakalauskas.c9users.io/ChangePricesPluginServices/public/getTime/3',
-        CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-        ));
         // Send the request & save response to $resp
         $resp = curl_exec($curl);
         // Close request to clear up some resources
