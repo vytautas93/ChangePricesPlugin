@@ -16,9 +16,12 @@
             <input type="submit" value="Submit">
         </form>    
     </div>
-    Result: {{ res | json_encode() }}
-    Result: {{ time | json_encode() }}
-    
+    <pre>
+    {{ dump(time) }}
+    {{ dump(time->id) }}
+    {{ dump(time->start_time) }}
+    {{ dump(end_time) }}
+    </pre>
 {% endblock %}
 
 

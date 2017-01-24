@@ -10,7 +10,7 @@ class ChangePricesPluginRouteServiceProvider extends RouteServiceProvider
 {
     public function map(Router $router)
     {
-        $router->get('hello','ChangePricesPlugin\Controllers\ContentController@showItem');
+        //$router->get('hello','ChangePricesPlugin\Controllers\ContentController@showItem');
         $router->get('get','ChangePricesPlugin\Controllers\ContentController@getTime');
     }
 }
