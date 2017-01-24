@@ -36,10 +36,7 @@ class ContentController extends Controller
         $resp = curl_exec($curl);
         curl_close($curl);
         $result = [];
-       
-        
-        $twig = new Twig_Environment($loader);
-        $result['time']->addGlobal("time", $resp);
+        $result['time'] = $resp;
         return $twig->render('ChangePricesPlugin::content.hello',$result);
         
         
