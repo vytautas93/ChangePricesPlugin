@@ -17,8 +17,10 @@
         </form>    
     </div>
     <pre>
-    Result: {{ time | json_encode() }}
+    Result: {{ time | json_decode() }}
+     {{ dump(time) }}
      {{ dump(start_time) }}
+     {{ dump(time->start_time) }}
     </pre>
 {% endblock %}
 
