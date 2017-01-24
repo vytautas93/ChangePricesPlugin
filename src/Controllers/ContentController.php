@@ -34,8 +34,8 @@ class ContentController extends Controller
     {
         $url = 'https://change-prices-plugin-services-sakalauskas.c9users.io/ChangePricesPluginServices/public/getTime/4';
         $curl = curl_init();
-        curl_setopt($cURL, CURLOPT_URL, $url);
-        curl_setopt($cURL, CURLOPT_HTTPGET, true);
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_HTTPGET, true);
         
         $resp = curl_exec($curl);
         curl_close($curl);
